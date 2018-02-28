@@ -1,0 +1,22 @@
+<h1>Listing articles</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>merchant</th>
+    <th>Spending</th>
+    <th>Title</th>
+    <th>Comment</th>
+  </tr>
+
+  <% @summaries.each do |summary| %>
+    <tr>
+      <td><%= summary.date %></td>
+      <td><%= summary.merchant %></td>
+      <td><%= summary.number %></td>
+      <td><%= summary.title %></td>
+      <td><%= summary.text %></td>
+      <td><%= link_to 'Show', summary_path(summary) %></td>
+    </tr>
+  <% end %>
+</table>

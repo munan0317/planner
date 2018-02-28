@@ -1,0 +1,29 @@
+<h1>New Entry</h1>
+
+<%= form_with scope: :entry, url: summaries_path,local: true do |form| %>
+  <p>
+    <%= form.label :Date %><br>
+    <%= form.text_field :date %>
+  </p>
+  <p>
+    <%= form.label :Merchant %><br>
+    <%= form.text_field :merchant %>
+  </p>
+  <p>
+    <%= form.label :Spending %><br>
+    <%= form.text_field :number %>
+  </p>
+  <p>
+    <%= form.label :Title %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :Comment %><br>
+    <%= form.text_area :text %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
